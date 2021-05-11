@@ -12,6 +12,12 @@
     <!-- Bootstrap core CSS -->
 <link href="bootstrap.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="photoswipe.css">
+<link rel="stylesheet" href="/default-skin/default-skin.css">
+<script src="photoswipe.min.js"></script>
+<script src="photoswipe-ui-default.min.js"></script>
+
+
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -93,48 +99,48 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="sosny.png" role="img">
+            <img id="photo1" class="bd-placeholder-img card-img-top" width="100%" height="225" src="sosny.png" role="img">
 
             <div class="card-body">
               <p class="card-text lead">Ботанический заказник &laquo;Меловые сосны&raquo;</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">История</button>
+                  <button id="gallery1" type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#historyModal1">История</button>
                 </div>
-                <a class="text-decoration-none" href="#"><small class="text-muted">Где это?</small></a>
+                <button class="small btn btn-link" data-bs-toggle="modal" data-bs-target="#mapModal1">Где это?</button>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="zaharovo.png" role="img">
+            <img id="photo2" class="bd-placeholder-img card-img-top" width="100%" height="225" src="zaharovo.png" role="img">
 
             <div class="card-body">
               <p class="card-text lead">Покровская церковь в селе Захарово</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">История</button>
+                  <button id="gallery2" type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#historyModal2">История</button>
                 </div>
-                <a class="text-decoration-none" href="#"><small class="text-muted">Где это?</small></a>
+                <button class="small btn btn-link" data-bs-toggle="modal" data-bs-target="#mapModal2">Где это?</button>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="10rodnik.jpg" role="img">
+            <img id="photo3" class="bd-placeholder-img card-img-top" width="100%" height="225" src="10rodnik.jpg" role="img">
 
             <div class="card-body">
               <p class="card-text lead">Святой родник &laquo;Десятый колодец&raquo;</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">История</button>
+                  <button id="gallery3" type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#historyModal3">История</button>
                 </div>
-                <a class="text-decoration-none" href="#"><small class="text-muted">Где это?</small></a>
+                <button class="small btn btn-link" data-bs-toggle="modal" data-bs-target="#mapModal3">Где это?</button>
               </div>
             </div>
           </div>
@@ -142,48 +148,48 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="plotina.jpg" role="img">
+            <img id="photo4" class="bd-placeholder-img card-img-top" width="100%" height="225" src="plotina.jpg" role="img">
 
             <div class="card-body">
               <p class="card-text lead">Чернянская плотина &laquo;ГЭС&raquo;, Морквино</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">История</button>
+                  <button id="gallery4" type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#historyModal4">История</button>
                 </div>
-                <a class="text-decoration-none" href="#"><small class="text-muted">Где это?</small></a>
+                <button class="small btn btn-link" data-bs-toggle="modal" data-bs-target="#mapModal4">Где это?</button>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="holki.jpeg" role="img">
+            <img id="photo5" class="bd-placeholder-img card-img-top" width="100%" height="225" src="holki.jpeg" role="img">
 
             <div class="card-body">
               <p class="card-text lead">Свято-Троицкий Холковский монастырь</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">История</button>
+                  <button id="gallery5" type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#historyModal5">История</button>
                 </div>
-                <a class="text-decoration-none" href="#"><small class="text-muted">Где это?</small></a>
+                <button class="small btn btn-link" data-bs-toggle="modal" data-bs-target="#mapModal5">Где это?</button>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="komuna.jpg" role="img">
+            <img id="photo6" class="bd-placeholder-img card-img-top" width="100%" height="225" src="komuna.jpg" role="img">
 
             <div class="card-body">
               <p class="card-text lead">Урочище &laquo;Липовая аллея на х. Коммуна&raquo;</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">История</button>
+                  <button id="gallery6" type="button" class="btn btn-sm btn-outline-secondary">Фотографии</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#historyModal6">История</button>
                 </div>
-                <a class="text-decoration-none" href="#"><small class="text-muted">Где это?</small></a>
+                <button class="small btn btn-link" data-bs-toggle="modal" data-bs-target="#mapModal6">Где это?</button>
               </div>
             </div>
           </div>
@@ -206,6 +212,523 @@
 
 
     <script src="bootstrap.bundle.min.js"></script>
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+      var openPhotoSwipe = function() {
+          var pswpElement = document.querySelectorAll('.pswp')[0];
+
+          // build items array
+          var items = [
+              {
+                  src: 'images/g1_1.jpg',
+                  w: 1200,
+                  h: 800
+              },
+              {
+                  src: 'images/g1_2.jpg',
+                  w: 794,
+                  h: 650
+              },
+              {
+                  src: 'images/g1_3.png',
+                  w: 659,
+                  h: 484
+              },
+              {
+                  src: 'images/g1_4.jpg',
+                  w: 1920,
+                  h: 1280
+              }
+          ];
+
+          // define options (if needed)
+          var options = {
+              // optionName: 'option value'
+              // for example:
+              index: 0 // start at first slide
+          };
+
+          // Initializes and opens PhotoSwipe
+          var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+
+      // openPhotoSwipe();
+
+      document.getElementById('photo1').onclick = openPhotoSwipe;
+      document.getElementById('gallery1').onclick = openPhotoSwipe;
+    </script>
+
+    <script type="text/javascript">
+      var openPhotoSwipe2 = function() {
+          var pswpElement = document.querySelectorAll('.pswp')[0];
+
+          // build items array
+          var items = [
+              {
+                  src: 'images/g2_1.jpg',
+                  w: 800,
+                  h: 590
+              },
+              {
+                  src: 'images/g2_2.jpg',
+                  w: 800,
+                  h: 600
+              },
+              {
+                  src: 'images/g2_3.jpg',
+                  w: 850,
+                  h: 741
+              },
+              {
+                  src: 'images/g2_4.jpg',
+                  w: 800,
+                  h: 633
+              }
+          ];
+
+          // define options (if needed)
+          var options = {
+              // optionName: 'option value'
+              // for example:
+              index: 0 // start at first slide
+          };
+
+          // Initializes and opens PhotoSwipe
+          var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+
+      // openPhotoSwipe();
+
+      document.getElementById('photo2').onclick = openPhotoSwipe2;
+      document.getElementById('gallery2').onclick = openPhotoSwipe2;
+    </script>
+
+    <script type="text/javascript">
+      var openPhotoSwipe3 = function() {
+          var pswpElement = document.querySelectorAll('.pswp')[0];
+
+          // build items array
+          var items = [
+              {
+                  src: 'images/g3_1.jpg',
+                  w: 478,
+                  h: 358
+              }
+          ];
+
+          // define options (if needed)
+          var options = {
+              // optionName: 'option value'
+              // for example:
+              index: 0 // start at first slide
+          };
+
+          // Initializes and opens PhotoSwipe
+          var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+
+      // openPhotoSwipe();
+
+      document.getElementById('photo3').onclick = openPhotoSwipe3;
+      document.getElementById('gallery3').onclick = openPhotoSwipe3;
+    </script>
+
+    <script type="text/javascript">
+      var openPhotoSwipe4 = function() {
+          var pswpElement = document.querySelectorAll('.pswp')[0];
+
+          // build items array
+          var items = [
+              {
+                  src: 'images/g4_1.jpg',
+                  w: 1000,
+                  h: 750
+              },
+              {
+                  src: 'images/g4_2.jpg',
+                  w: 1200,
+                  h: 890
+              },
+              {
+                  src: 'images/g4_3.jpg',
+                  w: 1200,
+                  h: 890
+              },
+              {
+                  src: 'images/g4_4.jpg',
+                  w: 1200,
+                  h: 890
+              }
+          ];
+
+          // define options (if needed)
+          var options = {
+              // optionName: 'option value'
+              // for example:
+              index: 0 // start at first slide
+          };
+
+          // Initializes and opens PhotoSwipe
+          var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+
+      // openPhotoSwipe();
+
+      document.getElementById('photo4').onclick = openPhotoSwipe4;
+      document.getElementById('gallery4').onclick = openPhotoSwipe4;
+    </script>
+
+    <script type="text/javascript">
+      var openPhotoSwipe5 = function() {
+          var pswpElement = document.querySelectorAll('.pswp')[0];
+
+          // build items array
+          var items = [
+              {
+                  src: 'images/g5_1.jpg',
+                  w: 1200,
+                  h: 800
+              },
+              {
+                  src: 'images/g5_2.jpg',
+                  w: 1186,
+                  h: 900
+              },
+              {
+                  src: 'images/g5_3.jpg',
+                  w: 1400,
+                  h: 933
+              }
+          ];
+
+          // define options (if needed)
+          var options = {
+              // optionName: 'option value'
+              // for example:
+              index: 0 // start at first slide
+          };
+
+          // Initializes and opens PhotoSwipe
+          var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+
+      // openPhotoSwipe();
+
+      document.getElementById('photo5').onclick = openPhotoSwipe5;
+      document.getElementById('gallery5').onclick = openPhotoSwipe5;
+    </script>
+
+    <script type="text/javascript">
+      var openPhotoSwipe6 = function() {
+          var pswpElement = document.querySelectorAll('.pswp')[0];
+
+          // build items array
+          var items = [
+              {
+                  src: 'images/g6_1.jpg',
+                  w: 1024,
+                  h: 680
+              }
+          ];
+
+          // define options (if needed)
+          var options = {
+              // optionName: 'option value'
+              // for example:
+              index: 0 // start at first slide
+          };
+
+          // Initializes and opens PhotoSwipe
+          var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+
+      // openPhotoSwipe();
+
+      document.getElementById('photo6').onclick = openPhotoSwipe6;
+      document.getElementById('gallery6').onclick = openPhotoSwipe6;
+    </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="historyModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Меловые сосны</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Ботанический заказник «Меловые сосны» находится на выезде из поселка Чернянка, на правом берегу реки Оскол. Он создан в 1998 году для сохранения редкого реликтового вида растений – меловой сосны, которая занесена в Красную книгу России.</p>
+            <p class="lead">Уникальность этого вида в том, что он произрастает не на песчаных дюнах, как обыкновенная сосна, а на меловых отложениях. Ученые до сих пор не пришли к единому мнению, как на меловых горах появились эти растения.</p>
+            <p class="lead">В заказнике растет около 330 деревьев, их высота достигает 30 метров.</p>
+            <p class="small text-muted">Источник: Яндекс</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="historyModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Покровская церковь</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">В 1908 год захаровские крестьяне на сходе решили, чтобы их молитвы быстрее доходили до Бога, построить в селе храм. Доверили строительство лучшим плотникам. Руководил строительством Савва Захаров, брат Егор, зажиточный крестьянин, много помогал материально.</p>
+            <p class="lead">В августе 1911 года церковь была построена, названа в честь Покрова Пресвятой Богородицы.</p>
+            <p class="lead">Архитектуру храма можно описать так: простота и красота. В плане это крест, восточная часть которого – алтарь. Над центром основного корпуса установлен восьмигранный сруб – восьмерик, с окнами на каждой грани. Шатровая кровля восьмерика необычна по форме: ввиду наличия треугольных фронтонов она имеет на наружной части фасонный излом. Вздымаясь и опадая, он вызывает ощущение то ли волны, то ли трепещущего крыла. Выше следует небольшой барабан, а на нём луковка – купол с крестом. Потемневшие брёвна сруба несут на себе отчётливые срубы обработки топором. Соединение венцов, врезка брёвен в углах выполнены с удивительным мастерством.</p>
+            <p class="lead">Деревянная, без единого гвоздя строенная, она стала украшением и радостью захаровских жителей. Время и безбожные руки пытались стереть с лица земли этот удивительный храм. Но он выстоял, сохранив для нас только свои стены.</p>
+            <p class="lead">20 июня 2001 года состоялся сход жителей села Захарово, по вопросу реставрации Покровской церкви. А 6 ноября 2011 года храм был освящён.</p>
+            <p class="small text-muted">Источник: Яндекс</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="historyModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Десятый колодец</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Святой источник расположенный между сел Орлик и Ольшанка известен на всю округу уже более двух столетий. Известен он стал потому, что по преданию в этом роднике явилась икона Параскевы Пятницы. А вот как это произошло, однажды раним утром пастухи пригонявшие сюда скот на водопой обнаружили в источнике лик мученицы святой Параскевы. Найденную икону отнесли в церковь в село Орлик. Утром, на следующий день, икона из храма исчезла и явилась вновь том же месте где была найдена пастухами. Образ вновь перенесли в церковь но утром икону опять не обнаружили на месте и нашли её в том же роднике. После этого всем миром было решено родник облагородить, отслужить молебен и освятить источник. После этого икона из храма уже не исчезала и находилась в Преображенском храме села Орлик.</p>
+            <p class="lead">Ежегодно в десятый четверг после Светлого Воскресения Христова у родника совершался водосвятный молебен, поэтому и назвали источник «Десятый колодец».</p>
+            <p class="lead">С приходом Советской власти началась богоборческая деятельность и в 30-х годах храм был разрушен, а чудотворная икона бесследно исчезла. Приходить к роднику и проводить молебен или чин освящения тоже запрещали. Но верующие все равно собирались у святого источника, рискуя быть замеченными могли понести серьезное наказание.</p>
+            <p class="small text-muted">Источник: Яндекс</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="historyModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Малая Морквинская ГЭС</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Введена в эксплуатацию 5 сентября 1958 года. Плановая мощность 300 кВт. Использовалась для энергоснабжения близлежащих сельхозпотребителей новообразованной Белгородской области. Была совмещена с насосной станцией. Выведена из эксплуатации после проведения в регион государственной высоковольтной линии ВЛ-35 кВ «Скородное — Короча». В настоящее время сохранилась дамба, здание насосной, трансформаторная и часть труб. Обводной канал так же сохранился, но произошло обрушение шлюзовых ворот. С самой дамбы открывается великолепный вид на верхний бьеф.</p>
+            <p class="small text-muted">Источник: Яндекс</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="historyModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Свято-Троицкий Холковский монастырь</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Свято-Троицкий Холковский монастырь − действующий православный мужской монастырь. Это − уникальный пещерный монастырь в Белгородской области, расположенный на берегу реки Оскол, у села Холки Чернянского района, в пятнадцати километрах от города Новый Оскол. Согласно преданию обитель находится на месте, где встретились князь Игорь Святославович и его брат Всеволод перед тем, как идти на половцев в 1185 году.</p>
+            <p class="lead">Первое летописное упоминание о монастыре относится к 1620 году. Монастырь был основан иноком Геласием. Его насельники жили и молились в меловых пещерах, архитектурно и планировочно напоминающих Киево-Печерские, выдолбленных в одном из холмов близ поселка Чернянка. В пещерах находились предельно аскетичные кельи (с кроватью и столом, вырубленными из мела) и подземный Монастырь просуществовал 144 года и в 1764 году был упразднен Указом императрицы Екатерины II. Вход в пещеры был завален, Богослужения в подземном храме не совершались. Монастырский Преображенский храм, возведенный в 50-х годах XVII в., стал приходским.</p>
+            <p class="small text-muted">Источник: Яндекс</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="historyModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Липовая аллея</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Чернянский район – край реликтовых сосен и липовых аллей.</p>
+            <p class="lead">Так поэтично в народе называют Чернянский район. Древние реликтовые сосны – вид, сохранившийся с ледникового периода и занесённый в Красную книгу, – расположились на меловой горе у реки Оскол. А хутор Коммуна в Чернянском районе – бывшая барская усадьба княгини Касаткиной – славится липовой аллеей, на которой произрастает 40 лип с более чем столетней историей.</p>
+            <p class="small text-muted">Источник: Яндекс</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mapModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Меловые сосны</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab1474ccf7bab273c64c416ab7e3cdeb8074b1a27925d2723a042ad1750eae15f&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mapModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Покровская церковь</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaaa8a8bf7fa8fcba27aa134c9b91fc274375106bf6e8faed86af819275d87fad&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mapModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Десятый колодец</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0d1cea09f47b3210bb05c809b0dfdacc80daed7ee9d5dd8652a8082236fb6d9a&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mapModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ГЭС</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A103582745146ce5203e4cd34b4e1777397b4c4eb3dc0f469fb875573ddb4e8fd&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mapModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Свято-Троицкий Холковский монастырь</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afefbc66af1ebb619c1666952a5e81a8a872fac1c4e73d0abf2e0e94eb20fbdf1&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mapModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Липовая аллея</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afecc8ea9c16d5422a1656e480a8e0d6216aa50550b24daf01acea878d95a55cc&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+          
+        </div>
+      </div>
+    </div>
 
       
   
